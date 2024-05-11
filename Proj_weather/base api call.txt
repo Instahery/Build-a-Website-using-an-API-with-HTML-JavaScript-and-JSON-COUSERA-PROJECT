@@ -1,0 +1,225 @@
+Project Scenario
+
+The team at a European travel agency is trying to increase travel bookings. To do this, they want to provide an ability for their website visitors to look up a 7 day weather forecast for major European cities.
+
+They want you to create a webpage that will retrieve weather forecasts from an external service. This feature will help the agency maximize their travel bookings and sales through their website.
+
+Project Objectives
+
+    Provide ability for website users to look up 7 day weather forecasts for major European cities
+
+    Keep website visitors on the website longer
+
+    Increase online bookings
+
+Your Challenge
+
+Your challenge will be to write a webpage that uses API to retrieve weather information from an external source. To do this, you will create the user interface, send the request to the external source using JavaScript, process data received and present the information on your webpage using HTML.
+
+In this project, we'll use 7Timer API, which is free of charge and does not require any API keys.
+
+After you complete your project, you will share your webpage.
+
+
+
+ 2024042012
+ 9 6 5 -1 11 E 3 23 rain
+ 9 6 6 -1 12 E 3 22 rain
+ 9 6 5 2 11 E 2 22 rain
+ 9 6 8 -1 13 NW 2 22 rain
+ 9 6 8 2 14 E 3 22 rain
+ 9 6 8 -1 14 N 3 22 rain
+ 9 6 8 2 14 NW 2 21 rain
+ 9 6 8 -1 14 E 2 22 rain
+ 9 6 8 -1 14 NE 2 22 rain
+ 9 6 8 -1 14 NW 2 22 rain
+ 9 6 8 -1 14 E 2 22 rain
+ 9 6 8 -1 13 SE 2 23 rain
+ 9 6 8 -1 13 SE 2 24 rain
+
+ cloudcover,lifted_index,prec_type,prec_amount,temp2m,rh2m,wind10m_direction,wind10m_speed,weather
+
+ 52.367,4.904,Amsterdam,Netherlands
+      http://www.7timer.info/bin/api.pl?lon=52.36&lat=4.90&product=astro&output=xml
+ 2024042012
+ 5 6 4 -4 10 NE 2 30 none
+ 7 6 4 -4 10 E 2 30 none
+ 4 6 5 -6 11 E 2 29 none
+ 5 6 5 -6 11 NE 2 29 none
+ 8 6 5 -4 11 E 2 29 none
+ 8 6 4 -4 10 NE 2 29 none
+ 9 6 4 -4 10 NE 2 30 none
+
+   https://www.7timer.info/bin/civillight.php?lon=52.4&lat=4.9&ac=0&unit=metric&output=xml&tzshift=0
+    http://www.7timer.info/bin/api.pl?lon=52.36&lat=4.90&product=civillight&output=json
+
+
+    https://7timer.info/index.php?product=civillight&lon=-122.057&lat=37.419&lang=en&ac=0&unit=british&tzshift=0&site=
+ XML= 2024042012
+  pcloudy 30 30 2
+  cloudy 30 29 2
+  lightrain 30 29 3
+  mcloudy 30 29 2
+  mcloudy 30 29 3
+  cloudy 30 29 2
+  lightrain 30 29 2
+
+  JSON
+  {
+	"product" : "civillight" ,
+	"init" : "2024042012" ,
+	"dataseries" : [
+	{
+		"date" : 20240420,
+		"weather" : "pcloudy",
+		"temp2m" : {
+			"max" : 30,
+			"min" : 30
+		},
+		"wind10m_max" : 2
+	},	{
+		"date" : 20240421,
+		"weather" : "cloudy",
+		"temp2m" : {
+			"max" : 30,
+			"min" : 29
+		},
+		"wind10m_max" : 2
+	},	{
+		"date" : 20240422,
+		"weather" : "lightrain",
+		"temp2m" : {
+			"max" : 30,
+			"min" : 29
+		},
+		"wind10m_max" : 3
+	},	{
+		"date" : 20240423,
+		"weather" : "mcloudy",
+		"temp2m" : {
+			"max" : 30,
+			"min" : 29
+		},
+		"wind10m_max" : 2
+	},	{
+		"date" : 20240424,
+		"weather" : "mcloudy",
+		"temp2m" : {
+			"max" : 30,
+			"min" : 29
+		},
+		"wind10m_max" : 3
+	},	{
+		"date" : 20240425,
+		"weather" : "cloudy",
+		"temp2m" : {
+			"max" : 30,
+			"min" : 29
+		},
+		"wind10m_max" : 2
+	},	{
+		"date" : 20240426,
+		"weather" : "lightrain",
+		"temp2m" : {
+			"max" : 30,
+			"min" : 29
+		},
+		"wind10m_max" : 2
+	}
+	]
+}
+
+
+
+
+
+json astro
+{ "product" : "astro" ,
+"init" : "2024042012" ,
+"dataseries" :
+[
+{ "timepoint" : 3, "cloudcover" : 5, "seeing" : 6, "transparency" : 4, "lifted_index" : -4, "rh2m" : 10, "wind10m" : { "direction" : "NE", "speed" : 2 }, "temp2m" : 30, "prec_type" : "none" },
+{ "timepoint" : 6, "cloudcover" : 7, "seeing" : 6, "transparency" : 4, "lifted_index" : -4, "rh2m" : 10, "wind10m" : { "direction" : "E", "speed" : 2 }, "temp2m" : 30, "prec_type" : "none" },
+ { "timepoint" : 9, "cloudcover" : 4, "seeing" : 6, "transparency" : 5, "lifted_index" : -6, "rh2m" : 11, "wind10m" : { "direction" : "E", "speed" : 2 }, "temp2m" : 29, "prec_type" : "none" },
+{ "timepoint" : 12, "cloudcover" : 5, "seeing" : 6, "transparency" : 5, "lifted_index" : -6, "rh2m" : 11, "wind10m" : { "direction" : "NE", "speed" : 2 }, "temp2m" : 29, "prec_type" : "none" },
+ { "timepoint" : 15, "cloudcover" : 8, "seeing" : 6, "transparency" : 5, "lifted_index" : -4, "rh2m" : 11, "wind10m" : { "direction" : "E", "speed" : 2 }, "temp2m" : 29, "prec_type" : "none" },
+ { "timepoint" : 18, "cloudcover" : 8, "seeing" : 6, "transparency" : 4, "lifted_index" : -4, "rh2m" : 10, "wind10m" : { "direction" : "NE", "speed" : 2 }, "temp2m" : 29, "prec_type" : "none" },
+{ "timepoint" : 21, "cloudcover" : 9, "seeing" : 6, "transparency" : 4, "lifted_index" : -4, "rh2m" : 10, "wind10m" : { "direction" : "NE", "speed" : 2 }, "temp2m" : 30, "prec_type" : "none" }
+ ]
+  }
+
+
+
+  {"product" : "civillight" ,"init" : "2024042012" , "dataseries" : [ { date" : 20240420,"weather" : "pcloudy", "temp2m" : {  "max" : 30,"min" : 30 },"wind10m_max": 2 }
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Convert a string into a date object.</h2>
+<p id="demo"></p>
+
+<script>
+const text = ' {"name" : "civillight" ,"birth" : "2024042012" ,"wind10m_max": 2 }  ';
+const obj = JSON.parse(text);
+
+document.getElementById("demo").innerHTML = obj.name + ", " + obj.birth;
+</script>
+
+</body>
+</html>
+
+  ............................
+<script>
+const xmlhttp = new XMLHttpRequest();
+xmlhttp.onload = function() {
+    const myObj = JSON.parse(this.responseText);
+    document.getElementById("demo").innerHTML = myObj.init;
+}
+xmlhttp.open("GET", "http://www.7timer.info/bin/api.pl?lon=52.36&lat=4.90&product=civillight&output=json");
+xmlhttp.send();
+</script>
+
+
+......................
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<title>Sample Page</title>
+
+<script>
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://www.7timer.info/bin/api.pl?lon=52.36&lat=4.90&product=civillight&output=json",
+    "method": "GET"
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+     const myObj = JSON.parse(response);
+
+    document.getElementById("demo").innerHTML = myObj["dataseries"][0].weather;
+    document.getElementById("demo2").innerHTML = myObj["dataseries"][0].temp2m.min;
+   // var content = response;
+    $("#windSpeed").append(content);
+
+
+    var currentWeather =  myObj["dataseries"][0].date;
+    $("#currentWeather").append(currentWeather);
+
+});
+</script>
+</head>
+<body>
+<h1>Sample Page</h1>
+
+<div id="windSpeed">Wind speed: </div>
+<div id="currentWeather">Current weather conditions: </div>
+<div id="demo">Wind speed: </div>
+<div id="demo2">Wind speed: </div>
+
+</body>
+</html>
