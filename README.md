@@ -1,6 +1,8 @@
 Euro Weather Prediction
 7 days  Weather Forecast
 
+See : http://coursera-myproject.free.nf/Proj_weather/
+
 
 This Web App uses the 7Timer API to get a 7-day weather forecast for a city using its longitude and latitude.
 
